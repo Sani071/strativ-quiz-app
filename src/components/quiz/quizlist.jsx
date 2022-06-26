@@ -38,7 +38,7 @@ export default function QuizList({ preview, user, admin, quizList }) {
                     {" "}
                     <Link to={`/question/${quiz.id}`}>
                       {" "}
-                      <Button color="info">Edit/Show</Button>
+                      <Button color="info">Edit/View</Button>
                     </Link>
                   </div>
                 )}

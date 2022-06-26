@@ -17,7 +17,7 @@ export default function ActiveQuestion() {
     archiveQuestionById(questionId, () => getQuestionByQuiz(id));
   };
 
-  const renderQuestionItem = useCallback((question, index) => {
+  const renderQuestionItem = useCallback((question) => {
     return (
       <div className="d-flex justify-content-between align-items-center">
         <div className="w-100 me-2">
