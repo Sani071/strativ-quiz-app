@@ -105,7 +105,7 @@ export default function AuthFrom({
         >
           {authType === 1 ? "Sign in" : "Sign up"}
         </button>
-      </form>{" "}
+      </form>
     </>
   );
 }

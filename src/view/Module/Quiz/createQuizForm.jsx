@@ -123,6 +123,7 @@ export default function CreateQuizForm({ update }) {
           options,
           title: questionTitle,
           rewardPoint: parseInt(rewardPoint) > 0 ? +rewardPoint : 1,
+          isArchived: false,
         };
 
         if (!update) {

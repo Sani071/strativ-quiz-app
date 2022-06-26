@@ -1,4 +1,5 @@
 import DB from "./IDB";
+import seeds from "../seeds.json";
 
 const onRequestError = (e) => {
   console.log("Database Error", e);
@@ -13,7 +14,7 @@ const questionStore = "question";
  *
  * @param {Object} userInfo - user information, (should contains email, password, role)
  */
-export const doSignUp = (userInfo, callback = () => {}) => {
+export const doSignUp = (userInfo, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -41,7 +42,7 @@ export const doSignUp = (userInfo, callback = () => {}) => {
  * @param {*} password
  * @param {*} callback
  */
-export const doSignIn = (email, password, callback = () => {}) => {
+export const doSignIn = (email, password, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -71,7 +72,7 @@ export const doSignIn = (email, password, callback = () => {}) => {
  * storing quiz to IndexDB
  * @param {Object} quiz - Quiz data to store in IndexDB
  */
-export const setQuiz = (quiz) => {
+export const addQuiz = (quiz) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -88,7 +89,7 @@ export const setQuiz = (quiz) => {
  * Retrieving quiz from IndexDB
  * @param {Function} callback - callback function to invocation with result
  */
-export const getQuiz = (callback = () => {}) => {
+export const getQuiz = (callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -108,7 +109,7 @@ export const getQuiz = (callback = () => {}) => {
  * @param {string} id - Id of the quiz to retrieve
  * @param {Function} callback - callback function to invocation with result
  */
-export const fetchQuizLayoutById = (id, callback = () => {}) => {
+export const fetchQuizLayoutById = (id, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -128,7 +129,7 @@ export const fetchQuizLayoutById = (id, callback = () => {}) => {
  * storing question to IndexDB
  * @param {Object} question - question object to save on IndexDB
  */
-export const setQuestion = (question) => {
+export const addQuestion = (question) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -146,7 +147,7 @@ export const setQuestion = (question) => {
  * @param {Object} question - question object to update on IndexDB
  * @param {Object} updateId - question id to update on IndexDB
  */
-export const updateQuestionById = (question, updateId, callback = () => {}) => {
+export const updateQuestionById = (question, updateId, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -171,7 +172,7 @@ export const updateQuestionById = (question, updateId, callback = () => {}) => {
  * Updating question by ID
  * @param {Object} updateId - question id to update on IndexDB
  */
-export const archiveQuestionById = (updateId, callback = () => {}) => {
+export const archiveQuestionById = (updateId, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -197,7 +198,7 @@ export const archiveQuestionById = (updateId, callback = () => {}) => {
  * @param {string} quizId - quiz id to retrieve
  * @param {Function} callback - callback function to invocation with result
  */
-export const fetchQuestionByQuizId = (quizId, callback = () => {}) => {
+export const fetchQuestionByQuizId = (quizId, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -222,7 +223,7 @@ export const fetchQuestionByQuizId = (quizId, callback = () => {}) => {
  * Retrieving all archived questions
  * @param {Function} callback - callback function to invocation with result
  */
-export const fetchArchivedQuestion = (callback = () => {}) => {
+export const fetchArchivedQuestion = (callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -247,7 +248,7 @@ export const fetchArchivedQuestion = (callback = () => {}) => {
  * @param {number} id         - The id of the targeted question that needs to be restored.
  * @param {Function} callback - callback function to invocation when work has done
  */
-export const restoreArchivedQuestion = (id, callback = () => {}) => {
+export const restoreArchivedQuestion = (id, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -273,7 +274,7 @@ export const restoreArchivedQuestion = (id, callback = () => {}) => {
  * @param {string} questionId - question id to retrieve
  * @param {Function} callback - callback function to invocation with result
  */
-export const fetchQuestionById = (questionId, callback = () => {}) => {
+export const fetchQuestionById = (questionId, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -293,7 +294,7 @@ export const fetchQuestionById = (questionId, callback = () => {}) => {
  * @param {Object} quizId - Quiz id to get the questions
  * @param {Function} callback - callback function to invocation with result
  */
-export const countQuestionByQuizId = (quizId, callback = () => {}) => {
+export const countQuestionByQuizId = (quizId, callback = () => { }) => {
   const request = DB();
 
   request.onerror = onRequestError;
@@ -314,3 +315,15 @@ export const countQuestionByQuizId = (quizId, callback = () => {}) => {
     };
   };
 };
+
+export const feedingDummyData = () => {
+  const feeder = (feeds = [], method, cb = () => { }) => {
+    feeds.forEach(feed => {
+      method(feed, cb)
+    })
+  };
+
+  feeder(seeds.quiz, addQuiz);
+  feeder(seeds.question, addQuestion);
+  feeder(seeds.user, doSignUp, () => { localStorage.setItem("hasLoadedSeeds", true) });
+}

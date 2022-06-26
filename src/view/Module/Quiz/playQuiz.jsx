@@ -45,11 +45,9 @@ export default function PlayQuiz() {
         <QuizEndScreen point={point} />
       ) : (
         <>
-          <h5 className="text-end pe-3">
+          <h5 className="text-end pe-3 m-0">
             Your Point
-            <span className="border d-inline-block p-2 rounded-circle border-info">
-              {point}
-            </span>
+            <b className="text-info h4 m-0"> {point} </b>
           </h5>
 
           {layout && layout === "single" && currentQuestion ? (

@@ -1,69 +1,116 @@
-[
+{
+  "quiz": [
     {
-        "id": 1,
-        "title": "What is css",
-        "isMultiChoice": false,
-        "correctOption": 2,
-        "options": [
-            {
-                "id": 1,
-                "title": "Programming Language"
-            },
-            {
-                "id": 2,
-                "title": "Cascading style sheet"
-            },
-            {
-                "id": 3,
-                "title": "Javascript Framework"
-            }
-        ]
+      "id": "cfvvdaEgQuiXr0i2V5DMU",
+      "layout": {
+        "label": "Single",
+        "value": "single"
+      },
+      "title": "Teq"
     },
     {
-        "id": 2,
-        "title": "What is React",
-        "isMultiChoice": false,
-        "correctOption": 3,
-        "options": [
-            {
-                "id": 1,
-                "title": "Programming Language"
-            },
-            {
-                "id": 2,
-                "title": "Cascading style sheet"
-            },
-            {
-                "id": 3,
-                "title": "Javascript Framework"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "title": "What is Javascript",
-        "isMultiChoice": true,
-        "correctOption": [
-            2,
-            4
-        ],
-        "options": [
-            {
-                "id": 1,
-                "title": "Programming Language"
-            },
-            {
-                "id": 2,
-                "title": "Cascading style sheet"
-            },
-            {
-                "id": 3,
-                "title": "Clone of Java"
-            },
-            {
-                "id": 4,
-                "title": "Scripting Language"
-            }
-        ]
+      "id": "s3Pq6xllfs4I5ctYsJIHw",
+      "layout": {
+        "label": "Single",
+        "value": "single"
+      },
+      "title": "General"
     }
-]
+  ],
+  "question": [
+    {
+      "correctOption": ["zR3VELUEJJbjUNsrOS0iL", "4a6hDo681yM6N1it2EnPC"],
+      "isMultiChoice": true,
+      "options": [
+        { "title": "nothing", "id": "bPHv3CS9pZJB71tAZQtaB", "isImage": false },
+        {
+          "title": "runtime env",
+          "id": "4a6hDo681yM6N1it2EnPC",
+          "isImage": false
+        },
+        { "title": "Runtime", "id": "zR3VELUEJJbjUNsrOS0iL", "isImage": false }
+      ],
+      "title": "What is Nodejs?",
+      "rewardPoint": 12,
+      "id": "MU0-oaikeGI8qGEpx0lj3",
+      "quizId": "cfvvdaEgQuiXr0i2V5DMU",
+      "isArchived": false
+    },
+    {
+      "correctOption": "LIe4Gzoi-RvCSZuH7Lx3R",
+      "isMultiChoice": false,
+      "options": [
+        { "title": "Compler", "id": "cSzJD7NFswFl4gDK0kYzN", "isImage": false },
+        { "title": "Runtime", "id": "F7gPfzQy999Tqd9yihwPA", "isImage": false },
+        {
+          "title": "Programming language",
+          "id": "LIe4Gzoi-RvCSZuH7Lx3R",
+          "isImage": false
+        }
+      ],
+      "title": "What is JS?",
+      "rewardPoint": 10,
+      "id": "VNxdEsMdwgVJ7TNmd1hio",
+      "quizId": "cfvvdaEgQuiXr0i2V5DMU",
+      "isArchived": false
+    },
+    {
+      "correctOption": "s3Pq6xllfs4I5ctYsJIHw",
+      "isMultiChoice": false,
+      "options": [
+        { "title": "Soil", "id": "11NZRvzvMqWGgzTZ4dY73", "isImage": false },
+        { "title": "Water", "id": "s3Pq6xllfs4I5ctYsJIHw", "isImage": false },
+        { "title": "Gas", "id": "NzurWfp3Q1uv9hM1dEBkT", "isImage": false }
+      ],
+      "title": "H20 means?",
+      "rewardPoint": 1,
+      "id": "9QsWADt1kSGqMNlDUSHxR",
+      "quizId": "6n4H6u8la5GnAPaMAu6sQ",
+      "isArchived": false
+    },
+    {
+      "correctOption": "MAgEcpdAtYVIvU0WsNL9F",
+      "isMultiChoice": false,
+      "options": [
+        { "title": "84", "id": "ZCKZvf_aQ8rHlwEwPj9yV", "isImage": false },
+        { "title": "54", "id": "Su8sBnikNWelCXJ59Xa3-", "isImage": false },
+        { "title": "74", "id": "rOpV_hX7jja5q4Vm3bdLF", "isImage": false },
+        { "title": "64", "id": "MAgEcpdAtYVIvU0WsNL9F", "isImage": false }
+      ],
+      "title": "How many districts does Bangladesh have?",
+      "rewardPoint": 1,
+      "id": "au2OviODhuHoNw34A3yYx",
+      "quizId": "6n4H6u8la5GnAPaMAu6sQ",
+      "isArchived": false
+    },
+    {
+      "correctOption": "ryHsdkJNN734biji9-",
+      "isMultiChoice": false,
+      "options": [
+        { "title": "4", "id": "Tsadjk&34734Hjsd8", "isImage": false },
+        { "title": "7", "id": "sjdhjskfJAdjsajJDAjsabd-", "isImage": false },
+        { "title": "8", "id": "ryHsdkJNN734biji9-", "isImage": false },
+        { "title": "10", "id": "shdj7gsadhg6fvhbbjbJSJ", "isImage": false }
+      ],
+      "title": "How many divisions does Bangladesh have?",
+      "rewardPoint": 5,
+      "id": "Ftafshj&76jsdjjh-hsadjh",
+      "quizId": "6n4H6u8la5GnAPaMAu6sQ",
+      "isArchived": true
+    }
+  ],
+  "user": [
+    {
+      "id": "-hGYmn-WlPIlW_4x2Pi6d",
+      "email": "user@mail.com",
+      "password": "1234",
+      "role": "user"
+    },
+    {
+      "id": "bR21FzMsoMPCYTSNdS9-X",
+      "email": "admin@mail.com",
+      "password": "1234",
+      "role": "admin"
+    }
+  ]
+}

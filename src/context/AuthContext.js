@@ -1,12 +1,11 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { doSignUp, doSignIn } from "../DB/useQuizIDB";
+import { useNavigate } from "react-router-dom";
+import { doSignUp, doSignIn, feedingDummyData } from "../DB/useQuizIDB";
 const AuthContext = createContext(undefined);
 const AuthDispatchContext = createContext(undefined);
 
 function AuthProvider({ children }) {
     const navigate = useNavigate();
-    const location = useLocation();
 
     const [authInfo, setAuthInfo] = useState({
         loggedIn: false,
@@ -41,7 +40,13 @@ function AuthProvider({ children }) {
             if (parsedAuthInfo.loggedIn && parsedAuthInfo.role) {
                 navigate(parsedAuthInfo.role === "admin" ? "/dashboard" : "/quiz");
             }
+        };
+
+        // Feeding dummy data
+        if (!localStorage.getItem("hasLoadedSeeds")) {
+            feedingDummyData();
         }
+
     }, []);
 
     const signOutHandler = () => {

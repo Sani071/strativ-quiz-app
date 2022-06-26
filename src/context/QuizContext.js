@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import {
   getQuiz,
-  setQuiz,
-  setQuestion,
+  addQuiz,
+  addQuestion,
   fetchQuestionById,
   fetchQuestionByQuizId,
   countQuestionByQuizId,
@@ -28,7 +28,7 @@ function QuizProvider({ children }) {
 
   const setQuizHandler = (quiz, cb) => {
     setQuizList([quiz, ...quizList]);
-    setQuiz(quiz, cb);
+    addQuiz(quiz, cb);
   };
 
   const getQuestionByQuiz = (quizId) => {
@@ -48,7 +48,7 @@ function QuizProvider({ children }) {
       <QuizDispatchContext.Provider
         value={{
           setQuizHandler,
-          setQuestionHandler: setQuestion,
+          setQuestionHandler: addQuestion,
           updateQuestionById,
           getQuestionByQuiz,
           countQuestionByQuizId,
