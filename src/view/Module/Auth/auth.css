@@ -1,0 +1,66 @@
+.auth-container {
+    text-align: center;
+    color: rgb(30, 29, 29);
+  }
+  .auth-container > header {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 auto 40px auto;
+    position: relative;
+    height: 35px;
+    width: 250px;
+    overflow: hidden;
+  }
+
+.header-headings {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  .header-headings > span {
+    /* margin: -4px 0; */
+    color: rgb(42, 41, 41)
+  }
+  .header-headings.sign-in {
+    transform: translateY(0);
+  }
+  .header-headings.sign-up {
+    transform: translateY(-35px);
+  }
+  
+  .options {
+    display: flex;
+    align-items: center;
+    width: 350px;
+  }
+  @media screen and (max-width: 380px) {
+    .options {
+      width: 100%;
+    }
+  }
+  .options > li {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+  }
+  .options > li:hover {
+    opacity: 1;
+  }
+  .options > li.active {
+    opacity: 1;
+  }
+  .options > li:nth-of-type(2) {
+    margin-left: 15px;
+  }
+  .options > li:last-of-type {
+    margin-left: auto;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+ 
