@@ -1,4 +1,14 @@
-## [Live link](https://strariv-quiz-app.herokuapp.com/)
+## Demo [strariv-quiz-app](https://strariv-quiz-app.herokuapp.com/)
+
+### Login as User
+
+email: user@mail.com
+password: 1234
+
+### Login as Admin
+
+email: admin@mail.com
+password: 1234
 
 ## Available Scripts
 

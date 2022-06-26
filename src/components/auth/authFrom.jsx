@@ -30,6 +30,19 @@ export default function AuthFrom({
   const inputChangeHandler = (evt, cb) => {
     cb(evt.target.value);
   };
+
+  const authCredentials = () => {
+    return (
+      <>
+        <div className="mt-2 text-muted">
+          <p># Login as User</p>
+          <p> email: user@mail.com password: 1234 </p>
+          <p># Login as Admin</p>
+          <p> email: admin@mail.com password: 1234 </p>
+        </div>
+      </>
+    );
+  };
   return (
     <>
       <form className="auth-form" onSubmit={(evt) => submitHandler(evt)}>
@@ -106,6 +119,8 @@ export default function AuthFrom({
           {authType === 1 ? "Sign in" : "Sign up"}
         </button>
       </form>
+
+      {authType === 1 && authCredentials()}
     </>
   );
 }
