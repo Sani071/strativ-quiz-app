@@ -9,10 +9,10 @@
       "title": "Teq"
     },
     {
-      "id": "s3Pq6xllfs4I5ctYsJIHw",
+      "id": "6n4H6u8la5GnAPaMAu6sQ",
       "layout": {
-        "label": "Single",
-        "value": "single"
+        "label": "Multiple",
+        "value": "multiple"
       },
       "title": "General"
     }
@@ -55,11 +55,11 @@
       "isArchived": false
     },
     {
-      "correctOption": "s3Pq6xllfs4I5ctYsJIHw",
+      "correctOption": "s3Pq6xllfs4I5dsctYsJIHw",
       "isMultiChoice": false,
       "options": [
         { "title": "Soil", "id": "11NZRvzvMqWGgzTZ4dY73", "isImage": false },
-        { "title": "Water", "id": "s3Pq6xllfs4I5ctYsJIHw", "isImage": false },
+        { "title": "Water", "id": "s3Pq6xllfs4I5dsctYsJIHw", "isImage": false },
         { "title": "Gas", "id": "NzurWfp3Q1uv9hM1dEBkT", "isImage": false }
       ],
       "title": "H20 means?",
