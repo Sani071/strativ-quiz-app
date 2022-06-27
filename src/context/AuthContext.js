@@ -43,7 +43,7 @@ function AuthProvider({ children }) {
         };
 
         // Feeding dummy data
-        if (!localStorage.getItem("hasLoadedSeeds")) {
+        if (!localStorage.getItem("hasLoadedSeedsv2")) {
             feedingDummyData();
         }
 

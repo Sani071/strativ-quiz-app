@@ -325,5 +325,5 @@ export const feedingDummyData = () => {
 
   feeder(seeds.quiz, addQuiz);
   feeder(seeds.question, addQuestion);
-  feeder(seeds.user, doSignUp, () => { localStorage.setItem("hasLoadedSeeds", true) });
+  feeder(seeds.user, doSignUp, () => { localStorage.setItem("hasLoadedSeedsv2", true) });
 }
