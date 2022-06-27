@@ -4,7 +4,6 @@ import { Button, ListGroup, ListGroupItem } from "reactstrap";
 import QuestionItemCard from "./questionItem";
 
 export default function ActiveQuestionList({ questionList, deleteHandler }) {
-  console.log(JSON.stringify(questionList));
   const renderQuestionItem = useCallback((question) => {
     return (
       <div className="d-flex justify-content-between align-items-center">
