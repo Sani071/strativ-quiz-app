@@ -6,7 +6,7 @@
         "label": "Single",
         "value": "single"
       },
-      "title": "Teq"
+      "title": "Technology"
     },
     {
       "id": "6n4H6u8la5GnAPaMAu6sQ",
@@ -19,16 +19,24 @@
   ],
   "question": [
     {
-      "correctOption": ["zR3VELUEJJbjUNsrOS0iL", "4a6hDo681yM6N1it2EnPC"],
+      "correctOption": "4a6hDo681yM6N1it2EnPC",
       "isMultiChoice": true,
       "options": [
-        { "title": "nothing", "id": "bPHv3CS9pZJB71tAZQtaB", "isImage": false },
         {
-          "title": "runtime env",
+          "title": "Framework",
+          "id": "bPHv3CS9pZJB71tAZQtaB",
+          "isImage": false
+        },
+        {
+          "title": "Library",
           "id": "4a6hDo681yM6N1it2EnPC",
           "isImage": false
         },
-        { "title": "Runtime", "id": "zR3VELUEJJbjUNsrOS0iL", "isImage": false }
+        {
+          "title": "Runtime env",
+          "id": "zR3VELUEJJbjUNsrOS0iL",
+          "isImage": false
+        }
       ],
       "title": "What is Nodejs?",
       "rewardPoint": 12,
@@ -40,7 +48,11 @@
       "correctOption": "LIe4Gzoi-RvCSZuH7Lx3R",
       "isMultiChoice": false,
       "options": [
-        { "title": "Compler", "id": "cSzJD7NFswFl4gDK0kYzN", "isImage": false },
+        {
+          "title": "Compiler",
+          "id": "cSzJD7NFswFl4gDK0kYzN",
+          "isImage": false
+        },
         { "title": "Runtime", "id": "F7gPfzQy999Tqd9yihwPA", "isImage": false },
         {
           "title": "Programming language",
